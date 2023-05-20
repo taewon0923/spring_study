@@ -1,0 +1,18 @@
+package hello.core.singleton;
+
+public class SingletonService {
+
+    private static final SingletonService intance = new SingletonService();
+
+    public static SingletonService getInstance(){
+        return intance;
+    }
+
+    private SingletonService() {
+
+    }
+
+    public void login(){
+        System.out.println("싱글톤 객체 로직 호출");
+    }
+}
