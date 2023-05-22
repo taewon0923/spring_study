@@ -27,7 +27,7 @@ public class ApplicationContextSameBeanFindTest {
     @DisplayName("타입이 같은 빈이 있을면 중복 오류가 발생한다")
     void findBeanByTypeDuplicate(){
         ac.getBean(MemberRepository.class);
-        assertThrows(NoUniqueBeanDefinitionException.class, () -> ac.getBean(MemberRepository.class));
+        assertThrows(NoUniqueBeanDefinitionException.class, () -> ac.getBean("memberRepository1",MemberRepository.class));
     }
 
     @Test
